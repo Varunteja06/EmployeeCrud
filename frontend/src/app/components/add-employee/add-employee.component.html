@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+  <label>
+    Name:
+    <input type="text" name="name" [(ngModel)]="employee.name" required />
+  </label>
+  <br />
+  <label>
+    Department:
+    <input type="text" name="department" [(ngModel)]="employee.department" required />
+  </label>
+  <br />
+  <!-- Add more fields as needed -->
+  <button type="submit" [disabled]="employeeForm.invalid">Add Employee</button>
+</form>
